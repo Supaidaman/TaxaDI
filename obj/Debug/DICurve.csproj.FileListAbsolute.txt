@@ -1,0 +1,9 @@
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\bin\Debug\DICurve.exe.config
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\bin\Debug\DICurve.exe
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\bin\Debug\DICurve.pdb
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.Form1.resources
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.Properties.Resources.resources
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.csproj.GenerateResource.Cache
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.exe
+c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.pdb
+C:\Users\Vinícius\Documents\Visual Studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.csprojResolveAssemblyReference.cache
