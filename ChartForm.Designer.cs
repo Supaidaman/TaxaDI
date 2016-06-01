@@ -41,14 +41,14 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, -4);
+            this.chart1.Location = new System.Drawing.Point(1, 12);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
-            series1.Name = "Series2";
+            series1.Name = "TaxaDI";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 300);
+            this.chart1.Size = new System.Drawing.Size(480, 331);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
@@ -56,7 +56,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 318);
+            this.ClientSize = new System.Drawing.Size(509, 339);
             this.Controls.Add(this.chart1);
             this.Name = "ChartForm";
             this.Text = "ChartForm";

@@ -89,7 +89,7 @@ namespace DICurve
             // open an BD_Final.txt then execute the weird calc on line with DI1
             downloadArchive();
             String time = dateTimePicker1.Value.ToString("yyMMdd") ;
-            MessageBox.Show("Arquivo Carregado.");
+           
         }
         BindingSource bs = new BindingSource(); 
        
@@ -109,24 +109,33 @@ namespace DICurve
         {
             String time;
 
-        
-            using (WebClient wc = new WebClient())
+
+            try
             {
-                time = dateTimePicker1.Value.ToString("yyMMdd");
-                wc.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.33 Safari/537.36");
-                wc.DownloadFile(new System.Uri("http://www.bmf.com.br/ftp/ContratosPregaoFinal/BF" + time + ".ex_"),
-                "BF" + time + ".exe");
-               //  MessageBox.Show("Foi");
+                using (WebClient wc = new WebClient())
+                {
+                    time = dateTimePicker1.Value.ToString("yyMMdd");
+                    wc.Headers.Add("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.33 Safari/537.36");
+                    wc.DownloadFile(new System.Uri("http://www.bmf.com.br/ftp/ContratosPregaoFinal/BF" + time + ".ex_"),
+                    "BF" + time + ".exe");
+                    //  MessageBox.Show("Foi");
+                }
+                //Executa .exe
+                Process proc = new Process();
+                Process.Start("BF" + time + ".exe");
+                //sproc.WaitForExit();
+                //Abre arquivo texto
+                openTextFile();
+          }
+            catch (System.Net.WebException e)
+            {
+                MessageBox.Show("Data Inválida!");
             }
-            //Executa .exe
-            Process proc = new Process();
-            Process.Start("BF" + time + ".exe");
-            //Abre arquivo texto
-            openTextFile();
         }
 
         private void openTextFile()
         {
+            //sleep to ensure safety
             int milliseconds = 2000;
             Thread.Sleep(milliseconds);
            string[] lines = System.IO.File.ReadAllLines("BD_Final.txt");
@@ -138,9 +147,9 @@ namespace DICurve
                 { 
                     calculateTax(line); 
                 }
-                   
-              
-                    
+
+
+               // MessageBox.Show("Arquivo Carregado.");     
              
                 
             }
@@ -257,7 +266,14 @@ namespace DICurve
              //datesList.OrderBy(x => x.data)
             //listToPlot.OrderBy<DaysPlusTax>();
            // listToPlot.OrderBy(x=> x.)
-            listToPlot = listToPlot.OrderBy(x => x.Days).ToList();
+            try
+            {
+                listToPlot = listToPlot.OrderBy(x => x.Days).ToList();
+            }
+            catch (ArgumentNullException exc)
+            {
+                MessageBox.Show("Curva Inválida");
+            }
             new ChartForm().Show();
         }
 

@@ -23,19 +23,19 @@ namespace DICurve
       
         private void ChartForm_Load(object sender, EventArgs e)
         {
-            Random rdn = new Random();
-            //for (int i = 0; i < 50; i++)
-            //{
-            //    chart1.Series["Series2"].Points.AddXY
-            //                    (rdn.Next(0, 10), rdn.Next(0, 10));
-            //    //chart1.Series["test2"].Points.AddXY
-            //      //              (rdn.Next(0, 10), rdn.Next(0, 10));
-            //}
-
-            foreach (DICurve.Form1.DaysPlusTax i in Form1.listToPlot)
+           
+            try
             {
-                chart1.Series["Series2"].Points.AddXY(i.Days,i.Tax);
-                
+                foreach (DICurve.Form1.DaysPlusTax i in Form1.listToPlot)
+                {
+
+                    chart1.Series["TaxaDI"].Points.AddXY(i.Days, i.Tax);
+
+                }
+            }
+            catch(NullReferenceException exc)
+            {
+                MessageBox.Show("Curva Inválida");
             }
         }
     }
