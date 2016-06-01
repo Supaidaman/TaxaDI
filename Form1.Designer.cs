@@ -41,6 +41,10 @@
             this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.currentDateAndTaxBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentDateAndTaxBindingSource)).BeginInit();
@@ -91,18 +95,18 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(149, 248);
+            this.button2.Location = new System.Drawing.Point(138, 212);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(79, 35);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Calcular";
+            this.button2.Text = "Calcular (Linear)";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 298);
+            this.label2.Location = new System.Drawing.Point(217, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 6;
@@ -110,9 +114,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 291);
+            this.textBox1.Location = new System.Drawing.Point(223, 267);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(80, 20);
+            this.textBox1.Size = new System.Drawing.Size(49, 20);
             this.textBox1.TabIndex = 7;
             // 
             // taxaDataGridViewTextBoxColumn
@@ -131,11 +135,51 @@
             // 
             this.currentDateAndTaxBindingSource.DataSource = typeof(DICurve.CurrentDateAndTax);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(223, 228);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(50, 20);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(217, 212);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Dias Uteis";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(138, 248);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 34);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Calcular (Exponencial)";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(13, 288);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(99, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Plotar Grafico";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(292, 323);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
@@ -169,6 +213,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource currentDateAndTaxBindingSource;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
 

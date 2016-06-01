@@ -7,3 +7,4 @@ c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Deb
 c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.exe
 c:\users\vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.pdb
 C:\Users\Vinícius\Documents\Visual Studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.csprojResolveAssemblyReference.cache
+C:\Users\Vinícius\documents\visual studio 2013\Projects\DICurve\DICurve\obj\Debug\DICurve.ChartForm.resources
